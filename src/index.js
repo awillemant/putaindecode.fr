@@ -7,9 +7,7 @@ var Header = require("./components/header")
 fs.writeFileSync(
   "./dist/index.html",
   React.renderToStaticMarkup(
-    <App content={
-      React.renderToString(<Header />)
-    }/>
+    <App />
   ),
   "utf8"
 )
