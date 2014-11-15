@@ -1,8 +1,8 @@
 var fs = require("fs")
 var React = require("react/addons")
 
-var App = require("./components/app.js")
-var Header = require("./components/header.js")
+var App = require("./components/app")
+var Header = require("./components/header")
 
 fs.writeFileSync(
   "./dist/index.html",
