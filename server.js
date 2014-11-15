@@ -8,7 +8,8 @@ var devServer = new WebpackDevServer(
   webpack(config),
   {
     publicPath: config.output.publicPath,
-    hot: true
+    hot: true,
+    contentBase: "dist"
   }
 )
 
