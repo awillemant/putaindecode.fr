@@ -6,7 +6,7 @@ var App = React.createClass({
       <html lang="fr">
         <head>
           <meta charSet="utf8" />
-          <link rel="stylesheet" href="/assets/stylesheets/index.css" />
+          <link rel="stylesheet" href="/index.css" />
           <title>{this.props.title}</title>
         </head>
         <body>
