@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm run stylesheet",
+    "prestart": "npm i && npm run stylesheet",
     "start": "node server",
     "stylesheet": "cssnext src/public/stylesheets/index.css dist/index.css",
     "test": "tape test/**.js"
