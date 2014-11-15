@@ -1,24 +1,22 @@
 {
   "name": "putaindecode.fr",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "license": "MIT",
+  "authors": "https://github.com/putaindecode/putaindecode.fr/graphs/contributors",
+  "homepage": "http://putaindecode.fr",
+  "repositoryHttpUrl": "http://github.com/putaindecode/putaindecode.fr",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/putaindecode/putaindecode.fr.git"
+  },
+  "bugs": {
+  "url": "https://github.com/putaindecode/putaindecode.fr/issues"
+  },
   "scripts": {
     "prestart": "npm i && npm run stylesheet && node staticPageGenerator",
     "start": "node server",
-    "stylesheet": "cssnext src/public/stylesheets/index.css dist/index.css",
-    "test": "tape test/**.js"
+    "stylesheet": "cssnext --watch --verbose src/public/stylesheets/index.css dist/index.css &",
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:putaindecode/putaindecode.fr.git"
-  },
-  "author": "bloodyowl",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/putaindecode/putaindecode.fr/issues"
-  },
-  "homepage": "https://github.com/putaindecode/putaindecode.fr",
   "devDependencies": {
     "bloody-mdparser": "^1.0.0",
     "cssnext": "^0.5.0",
