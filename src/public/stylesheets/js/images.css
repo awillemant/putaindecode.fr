@@ -1,0 +1,18 @@
+.js-AnimateLoad {
+  visibility: hidden;
+}
+
+.js-Loaded {
+  visibility: visible;
+  animation: .8s ease-in-out Animation--fadeIn;
+}
+
+@keyframes Animation--fadeIn {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,20 @@
+:root {
+  --Grid-font-size: var(--r-fontSize);
+  --Grid-gutter-size: var(--r-lineHeight);
+}
+
+.Grid {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 54em) {
+  .Grid {
+    width: auto;
+  }
+  .Grid-cell {
+    width: auto !important;
+    display: block !important;
+  }
+}

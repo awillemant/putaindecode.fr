@@ -1,0 +1,9 @@
+:root {
+  --putainde-Color-lightGrey: #ebeef0;
+  --putainde-Color-red: #c33;
+}
+
+::selection {
+  background: #444;
+  color: #fff;
+}
