@@ -1,3 +1,8 @@
+require("node-jsx").install({
+  harmony: true
+})
+require("./src")
+
 var webpack = require("webpack")
 var WebpackDevServer = require("webpack-dev-server")
 var config = require("./webpack.config")
@@ -23,3 +28,5 @@ devServer.listen(
     console.log("Listening at localhost:" + port)
   }
 )
+
+require("opn")("http://localhost:" + port)
