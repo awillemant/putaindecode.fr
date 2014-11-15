@@ -16,6 +16,9 @@
     "prestart": "npm i && npm run stylesheet && node staticPageGenerator",
     "start": "node server",
     "stylesheet": "cssnext --watch --verbose src/public/stylesheets/index.css dist/index.css &",
+    "test": "echo todo; exit 1",
+    "deploy": "GH_OWNER=putaindecode GH_PROJECT_NAME=putaindecode.fr node deploy",
+    "travis": "if [ \"$TRAVIS_PULL_REQUEST\" != \"false\" ] || [ \"$TRAVIS_BRANCH\" != \"master\" ]; then npm run test; else npm run deploy; fi;"
   },
   "devDependencies": {
     "bloody-mdparser": "^1.0.0",
