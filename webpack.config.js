@@ -25,8 +25,8 @@ module.exports = {
   module : {
     loaders : [
       {
-        test: /\.js$/,
-        loaders: ["react-hot", "jsx-loader?harmony"]
+        test: /src\/[\s\S]+\.js$/,
+        loaders: ["react-hot", "6to5-loader", "jsx-loader"]
       }
     ]
   }
