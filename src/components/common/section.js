@@ -4,15 +4,17 @@ var Title = require("./title")
 
 var Section = React.createClass({
   propTypes : {
-    title : React.PropTypes.title.string
+    title : React.PropTypes.string
   },
   render() {
-    <div className="putainde-Section r-Grid">
-      <div className="putainde-Section-contents r-Grid-cell r-all--8of12">
-        <Title title={this.props.title}/>
-        {this.props.children}
+    return (
+      <div className="putainde-Section r-Grid">
+        <div className="putainde-Section-contents r-Grid-cell r-all--8of12">
+          <Title title={this.props.title}/>
+          {this.props.children}
+        </div>
       </div>
-    </div>
+    )
   }
 })
 
