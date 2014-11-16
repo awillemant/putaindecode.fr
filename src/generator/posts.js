@@ -13,7 +13,7 @@ mdParser("src/posts/**/*.md")
     }
     fs.writeFile(
       "dist/api/" + chunk.meta.Slug + ".json",
-      JSON.stringify(chunk)
+      JSON.stringify(chunk, null, 2)
     )
     _posts = assign({}, _posts, (function(){
       var object = {}
@@ -37,6 +37,6 @@ mdParser("src/posts/**/*.md")
     mkdirp.sync("dist/api/posts-list")
     fs.writeFile(
       "dist/api/posts-list/index.json",
-      JSON.stringify({ list: posts })
+      JSON.stringify({ list: posts }, null, 2)
     )
   })
