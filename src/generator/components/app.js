@@ -3,7 +3,7 @@ var React = require("react/addons")
 var App = React.createClass({
   render() {
     return (
-      <html lang="fr">
+      <html className="r-VerticalRhythm" lang="fr">
         <head>
           <meta charSet="utf8" />
           <link rel="stylesheet" href="/index.css" />
