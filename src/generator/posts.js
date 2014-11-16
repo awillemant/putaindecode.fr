@@ -2,6 +2,7 @@ var mdParser = require("bloody-mdparser")
 var through = require("through2")
 var assign = require("object-assign")
 var fs = require("fs")
+var mkdirp = require("mkdirp")
 
 var _posts = {}
 
@@ -21,8 +22,21 @@ mdParser("src/posts/**/*.md")
     })())
   })
   .on("end", function(){
+    var posts = Object.keys(_posts)
+      // remove unused HTML contents
+      .map(function(key){
+        return assign(_posts[key], {html : void 0})
+      })
+      // sort by descending order
+      .sort(function(left, right){
+        return (
+          +new Date(right.meta.Date) -
+          +new Date(left.meta.Date)
+        )
+      })
+    mkdirp.sync("dist/api/posts-list")
     fs.writeFile(
-      "dist/api/posts.json",
-      JSON.stringify(_posts)
+      "dist/api/posts-list/index.json",
+      JSON.stringify(posts)
     )
   })

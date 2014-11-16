@@ -1,18 +1,20 @@
 {
   "name": "putaindecode.fr",
   "version": "2.0.0",
+  "description": "",
   "license": "MIT",
   "authors": "https://github.com/putaindecode/putaindecode.fr/graphs/contributors",
   "homepage": "http://putaindecode.fr",
   "repositoryHttpUrl": "http://github.com/putaindecode/putaindecode.fr",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/putaindecode/putaindecode.fr.git"
+    "type": "git",
+    "url": "https://github.com/putaindecode/putaindecode.fr.git"
   },
   "bugs": {
-  "url": "https://github.com/putaindecode/putaindecode.fr/issues"
+    "url": "https://github.com/putaindecode/putaindecode.fr/issues"
   },
   "scripts": {
+     "api": "node src/generator/posts",
     "init-osx": "brew install icoutils",
     "favicon": "icotool -c images/p!-logo--no-bubble-16.png images/p!-logo--no-bubble-32.png -o public/favicon.ico",
 
@@ -29,6 +31,7 @@
     "bloody-mdparser": "^1.0.0",
     "cssnext": "^0.5.0",
     "jsx-loader": "^0.12.1",
+    "mkdirp": "^0.5.0",
     "node-jsx": "^0.12.0",
     "opn": "^1.0.0",
     "react-hot-loader": "^0.5.0",
