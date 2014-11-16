@@ -37,6 +37,6 @@ mdParser("src/posts/**/*.md")
     mkdirp.sync("dist/api/posts-list")
     fs.writeFile(
       "dist/api/posts-list/index.json",
-      JSON.stringify(posts)
+      JSON.stringify({ list: posts })
     )
   })
