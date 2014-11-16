@@ -6,13 +6,15 @@ var mkdirp = require("mkdirp")
 
 var _posts = {}
 
+mkdirp.sync("dist/api/posts")
+
 mdParser("src/posts/**/*.md")
   .on("data", function(chunk){
     if(chunk.meta == null) {
       return
     }
     fs.writeFile(
-      "dist/api/" + chunk.meta.Slug + ".json",
+      "dist/api/posts/" + chunk.meta.Slug + ".json",
       JSON.stringify(chunk, null, 2)
     )
     _posts = assign({}, _posts, (function(){
