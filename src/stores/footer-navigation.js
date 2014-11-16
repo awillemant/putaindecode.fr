@@ -21,12 +21,12 @@ var _store = {
     {
       name: "twitter",
       url: "https://twitter.com/putaindecode/",
-      tooltip : true
+      icon : "github"
     },
     {
       name: "GitHub",
       url: "https://github.com/putaindecode/",
-      tooltip : true
+      icon : "github"
     }
   ]
 }
