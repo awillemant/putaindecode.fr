@@ -34,11 +34,6 @@ var Footer = React.createClass({
   mixins : [
     RenderOnceMixin
   ],
-  getDefaultProps() {
-    return {
-      title : "Putain de Code !"
-    }
-  },
   propTypes : {
     title : React.PropTypes.string
   },
