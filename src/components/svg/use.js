@@ -10,7 +10,7 @@ var Use = React.createClass({
     this.getDOMNode().setAttribute(XLINK_HREF_ATTRIBUTE, this.props.xlinkHref)
   },
   render() {
-    return React.createElement("use")
+    return React.createElement("use", null)
   }
 })
 
