@@ -13,10 +13,15 @@
   "url": "https://github.com/putaindecode/putaindecode.fr/issues"
   },
   "scripts": {
+    "init-osx": "brew install icoutils",
+    "favicon": "icotool -c images/p!-logo--no-bubble-16.png images/p!-logo--no-bubble-32.png -o public/favicon.ico",
+
     "prestart": "npm i && npm run stylesheet && node staticPageGenerator",
     "start": "node server",
     "stylesheet": "cssnext --watch --verbose src/public/stylesheets/index.css dist/index.css &",
+
     "test": "echo todo; exit 1",
+
     "deploy": "GH_OWNER=putaindecode GH_PROJECT_NAME=putaindecode.fr node deploy",
     "travis": "if [ \"$TRAVIS_PULL_REQUEST\" != \"false\" ] || [ \"$TRAVIS_BRANCH\" != \"master\" ]; then npm run test; else npm run deploy; fi;"
   },
