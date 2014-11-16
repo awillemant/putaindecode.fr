@@ -8,21 +8,22 @@ var NavigationItem = React.createClass({
     item : React.PropTypes.shape({
       title : React.PropTypes.string,
       url : React.PropTypes.string,
-      icon : React.PropTypes.string
+      icon : React.PropTypes.string,
+      tooltipText : React.PropTypes.string
     }),
     currentPage : React.PropTypes.string
   },
   render() {
-    var hasTitle = this.props.item.hasOwnProperty("title")
+    var hasTooltipText = this.props.item.hasOwnProperty("hasTooltipText")
     var classes = cx({
       "putainde-Nav-item" : true,
       "putainde-Nav-item--current" : this.props.item.url == this.props.currentPage,
-      "putainde-Nav-item--icon" : hasTitle,
-      "r-Tooltip" : hasTitle,
-      "r-Tooltip--bottom" : hasTitle
+      "putainde-Nav-item--icon" : hasTooltipText,
+      "r-Tooltip" : hasTooltipText,
+      "r-Tooltip--bottom" : hasTooltipText
     })
     return (
-      <a className="putainde-Nav-item" href={this.props.item.url}>
+      <a className={classes} href={this.props.item.url}>
         {this.props.icon ? <Icon name={this.props.icon} /> : null}
         {this.props.item.title || ""}
       </a>
