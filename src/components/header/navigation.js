@@ -1,16 +1,22 @@
 var React = require("react/addons")
 
 var NavigationItem = require("./navigationItem")
+var NavigationStore = require("../../stores/navigation")
+var singleStoreMixinFactory = require("../../utils/mixins/SingleStoreMixin")
 
 var Navigation = React.createClass({
+  mixins : [
+    singleStoreMixinFactory(NavigationStore)
+  ],
   propTypes : {
-    list : React.PropTypes.array.isRequired,
     currentPage : React.PropTypes.string
   },
   render() {
     return (
       <nav className="putainde-Nav">
-        {this.props.list.map((item) => <NavigationItem item={item} />)}
+        {this.state.list.map(
+          (item, index) => <NavigationItem item={item} key={index} />
+        )}
       </nav>
     )
   }

@@ -23,8 +23,8 @@ var NavigationItem = React.createClass({
     })
     return (
       <a className="putainde-Nav-item" href={this.props.item.url}>
-        {this.props.icon ? <Icon /> : null}
-        {item.name || ""}
+        {this.props.icon ? <Icon name={this.props.icon} /> : null}
+        {this.props.item.title || ""}
       </a>
     )
   }

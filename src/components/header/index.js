@@ -10,13 +10,11 @@ var Header = React.createClass({
           <div className="r-Grid-cell r-all--5of12">
             <a className="putainde-SiteTitle" href="/">
               <img className="putainde-Logo" alt="Putain de code" src="/images/p!-logo.svg" />
-            </a>
-            <span>
               {"Putain de code !"}
-            </span>
+            </a>
           </div>
           <div className="r-Grid-cell r-all--7of12">
-            <Navigation list={[]}/>
+            <Navigation />
           </div>
         </div>
       </div>
