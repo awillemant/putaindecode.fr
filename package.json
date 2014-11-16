@@ -17,7 +17,7 @@
     "api": "node src/generator/posts",
     "init-osx": "brew install icoutils",
     "favicon": "icotool -c images/p!-logo--no-bubble-16.png images/p!-logo--no-bubble-32.png -o public/favicon.ico",
-    "prestart": "npm i && npm run stylesheet && node staticPageGenerator",
+    "prestart": "npm i && npm run stylesheet && node src/generator",
     "start": "node server",
     "stylesheet": "cssnext --watch --verbose src/public/stylesheets/index.css dist/index.css &",
     "test": "echo todo; exit 1",

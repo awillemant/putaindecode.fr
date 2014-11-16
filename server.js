@@ -1,7 +1,7 @@
 require("node-jsx").install({
   harmony: true
 })
-require("./src")
+require("./src/generator/html")
 
 var webpack = require("webpack")
 var WebpackDevServer = require("webpack-dev-server")
