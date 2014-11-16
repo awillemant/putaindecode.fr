@@ -2,7 +2,7 @@ var AppDispatcher = require("../dispatcher")
 var ActionTypes = require("../constants").ActionTypes
 
 var PostActions = {
-  receivePost (xhr) {
+  receivePost(xhr) {
     AppDispatcher.handleServerAction({
       type : ActionTypes.RECEIVED_POST,
       response : JSON.parse(xhr.responseText)
