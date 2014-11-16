@@ -25,13 +25,13 @@ mdParser("src/posts/**/*.md")
     var posts = Object.keys(_posts)
       // remove unused HTML contents
       .map(function(key){
-        return assign(_posts[key], {html : void 0})
+        return _posts[key].meta
       })
       // sort by descending order
       .sort(function(left, right){
         return (
-          +new Date(right.meta.Date) -
-          +new Date(left.meta.Date)
+          +new Date(right.Date) -
+          +new Date(left.Date)
         )
       })
     mkdirp.sync("dist/api/posts-list")

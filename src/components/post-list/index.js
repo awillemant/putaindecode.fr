@@ -5,6 +5,8 @@ var singleStoreMixinFactory = require("../../utils/mixins/SingleStoreMixin")
 var PostListStore = require("../../stores/post-list")
 var PostListActions = require("../../actions/PostListActions")
 
+var PostListItem = require("./item")
+
 var PostList = React.createClass({
   mixins : [
     singleStoreMixinFactory(PostListStore)
@@ -14,11 +16,11 @@ var PostList = React.createClass({
   },
   render() {
     return (
-      <ul>
-        {this.state.list.map(function(item, index){
-          return <li key={index}>{item.meta.Title}</li>
-        })}
-      </ul>
+      <div className="putainde-List">
+        {this.state.list.map(
+          (item, index) => <PostListItem item={item} key={index}/>
+        )}
+      </div>
     )
   }
 })
