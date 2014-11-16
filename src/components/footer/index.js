@@ -1,6 +1,5 @@
 var React = require("react/addons")
 
-var RenderOnceMixin = require("../../utils/mixins").RenderOnceMixin
 var FooterNavigationStore = require("../../stores/footer-navigation")
 var singleStoreMixinFactory = require("../../utils/mixins/SingleStoreMixin")
 
