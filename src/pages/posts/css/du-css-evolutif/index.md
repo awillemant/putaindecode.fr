@@ -1,4 +1,4 @@
-Modulaire, maintenable, réutilisable, accessible. Ces termes sont au coeur de nos métiers et on nous les rabache toute la journée.
+Modulaire, maintenable, réutilisable, accessible. Ces termes sont au cœur de nos métiers et on nous les rabache toute la journée.
 
 Malgré la grossièreté de ces mots pour certains d'entre nous, il est tout a fait possible de pondre du CSS en utilisant tous ces principes.
 
@@ -34,7 +34,7 @@ Partant de notre méthodologie, on va développer notre site web comme un gros L
 
 On pourrait imaginer des éléments comme `NavBar`, `Pagination`, `Article` que l'on va assembler au fur et à mesure de notre développement. Notre site sera composé de plusieurs dizaines de fichiers, mais aucun n'excèdera quelques centaines de lignes, grand maximum. Beaucoup plus facile à débugger, et donc sur le long terme plus maintenable.
 
-Il va de soit qu'on utilisera son outil preféré pour concatener et minimiser le tout en un seul fichier, sinon on risque d'avoir quelques problèmes de webperf.
+Il va de soi qu'on utilisera son outil preféré pour concaténer et minimiser le tout en un seul fichier, sinon on risque d'avoir quelques problèmes de _webperf_.
 
 ## Accessible
 
@@ -78,8 +78,8 @@ On va uiliser notre exemple de tout à l'heure avec `NavBar` :
 
 ## Pour finir
 
-C'est verbeux, on ne peut pas le nier. Par moment, on peut se dire qu'écrire une classe juste pour une proprieté, est-ce si pertinant que ça ? Sauf qu'au moment ou vous écrivez votre `css` vous ne pouvez pas dire qu'à la prochaine mise à jour, il vous faudra peut-être en rajouter 5, et donc votre classe sera finalment bien utile.
+C'est verbeux, on ne peut pas le nier. Par moment, on peut se dire qu'écrire une classe juste pour une proprieté, est-ce si pertinant que ça ? Sauf qu'au moment ou vous écrivez votre `css` vous ne pouvez pas dire qu'à la prochaine mise à jour, il vous faudra peut-être en rajouter 5, et donc votre classe sera finalement bien utile.
 
-La combinaison de toutes ces méthodes m'a fait abandonner `Sass` et son framework `Compass`. Ce qu'apporte un language comme `Sass` (au-délà de l'aspect programmation, mais c'est une autre histoire) vient principalement de ses features telles que  [nested](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#nested_rules) et [@extend](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend). Et fanchement, une bonne indentation, un bon nommage de classes et une utilisation intelligente de `BEM` vous ferons vite quitter `Sass` sans regarder en arrière.
+La combinaison de toutes ces méthodes m'a fait abandonner `Sass` et son framework `Compass`. Ce qu'apporte un language comme `Sass` (au-delà de l'aspect programmation, mais c'est une autre histoire) vient principalement de ses features telles que  [nested](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#nested_rules) et [@extend](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend). Et fanchement, une bonne indentation, un bon nommage de classes et une utilisation intelligente de `BEM` vous feront vite oublier `Sass` sans regarder en arrière.
 
 Sur l'ensemble de mes projets, je n'écris plus que ce qu'on appelle communément du `Vanilla CSS`. Juste un petit bémol, histoire de pouvoir utiliser des spécifications pas forcément encore compatibles sur tous les navigateurs, j'ai ajouté dans mon workflow l'outil [PostCSS](https://github.com/postcss/postcss), le tout contrôlé par [cssnext](http://cssnext.github.io/) dont voici quelques exemples d'[utilisation](https://cssnext.github.io/cssnext-playground/). Je vous encourage vivement à tester ces deux outils.
